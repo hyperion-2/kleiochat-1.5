@@ -1,0 +1,208 @@
+/* ── forum.css ── Retro 2000s • 4chan-style ── */
+
+/* Reset margins/padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page background */
+body {
+  background: #e0e0e0;
+  font-family: Arial, sans-serif;
+  color: #000;
+  line-height: 1.2;
+  font-size: 14px;
+}
+
+/* Header */
+header {
+  background: #007466;
+  color: #fff;
+  padding: 4px 8px;
+}
+header h1 {
+  font-size: 18px;
+}
+nav#board-nav {
+  margin-top: 4px;
+}
+nav#board-nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 8px;
+  font-size: 13px;
+}
+nav#board-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main container */
+main#content {
+  width: 95%;
+  max-width: 800px;
+  margin: 8px auto;
+  background: #fff;
+  border: 1px solid #007466;
+  padding: 8px;
+}
+
+/* Board list */
+main#content ul {
+  list-style: none;
+}
+main#content li {
+  padding: 4px 0;
+}
+main#content li a {
+  color: #007466;
+  text-decoration: none;
+  font-weight: bold;
+}
+main#content li a:hover {
+  text-decoration: underline;
+}
+
+/* Thread list */
+.thread-list li {
+  border-bottom: 1px solid #ccc;
+  padding: 6px 0;
+}
+.thread-list li a {
+  color: #007466;
+  text-decoration: none;
+  font-size: 15px;
+}
+.thread-list li a:hover {
+  text-decoration: underline;
+}
+.thread-list li div {
+  font-size: 12px;
+  color: #666;
+  margin-top: 2px;
+}
+
+/* Thread & replies */
+#thread-container h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+#thread-container > div {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 6px;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+.reply-list li {
+  border-bottom: 1px solid #eee;
+  padding: 4px 0;
+}
+.reply-list li strong {
+  font-size: 13px;
+}
+.reply-list li span {
+  font-size: 11px;
+  color: #666;
+}
+.reply-list li p {
+  margin-top: 2px;
+  font-size: 14px;
+}
+
+/* Forms (new thread & reply) */
+form {
+  margin-top: 8px;
+}
+form input[type="text"],
+form textarea {
+  width: 100%;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  padding: 4px;
+  border: 1px solid #ccc;
+  margin-bottom: 6px;
+  background: #fdfdfd;
+}
+form button {
+  background: #007466;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 14px;
+}
+form button:hover {
+  background: #005a50;
+}
+
+/* Back link */
+.back-link {
+  display: inline-block;
+  margin-top: 8px;
+  color: #007466;
+  text-decoration: none;
+  font-size: 13px;
+}
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.board-list, .thread-list {
+  list-style: none;
+  padding-left: 0;
+}
+.board-list li, .thread-list li {
+  margin: 6px 0;
+}
+.board-list a, .thread-list a {
+  color: #007466;
+  text-decoration: none;
+}
+.thread-list .meta {
+  font-size: 0.85em;
+  color: #555;
+}
+#timeframe-select {
+  margin-left: 8px;
+  font-size: 0.9em;
+}
+
+#notif-container {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 1000;
+  font-family: sans-serif;
+}
+#notif-btn {
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+#notif-count {
+  font-weight: bold;
+  color: red;
+}
+#notif-list {
+  background: #fff;
+  border: 1px solid #666;
+  padding: 8px;
+  width: 240px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#notif-list h4 {
+  margin: 0 0 8px;
+  font-size: 1em;
+}
+#notif-list ul {
+  list-style: none;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+#notif-list li {
+  margin-bottom: 6px;
+  font-size: 0.9em;
+}

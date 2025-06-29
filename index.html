@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>KleioChat 1.5</title>
+  <link rel="icon" href="assets/logo.png">
+
+
+  
+  <!-- Retro font -->
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+</head>
+<body>
+
+  
+  <!-- Forum Button -->
+  <div id="forum-controls">
+    <a href="forum.html">
+      <img src="assets/forum-icon.png" alt="Visit Forum" class="forum-btn">
+    </a>
+  </div>
+  
+  <div class="chat-window">
+    <img src="assets/logo.png" alt="KleioChat Logo" class="logo">
+
+    <div id="messages"></div>
+
+    <!-- Typing indicator -->
+    <div id="typing-indicator" hidden>…Hana is typing</div>
+
+    <div id="controls">
+      <input id="name" type="text" placeholder="Enter your name once" required>
+      <input id="text" type="text" placeholder="Type a message" autocomplete="off" maxlength="200">
+      <button id="send-text">Send</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

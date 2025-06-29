@@ -1,0 +1,158 @@
+/* Full-page background & scanlines */
+body {
+  margin: 0; padding: 0;
+  background: url("assets/logo.png") center/cover fixed; /* swap with bg image if you have one */
+  font-family: 'VT323', monospace;
+  color: #007466;
+  position: relative;
+}
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    rgba(0,0,0,0.05) 0,
+    rgba(0,0,0,0.05) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  z-index: 10;
+}
+
+#forum-controls {
+  position: fixed;
+  top: 16px;
+  left: 20px;
+  z-index: 10;
+}
+
+.forum-btn {
+  width: 80px;
+  height: 60px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  image-rendering: pixelated;
+}
+
+
+
+/* Chat container */
+.chat-window {
+  width: 360px; max-width: 95vw;
+  margin: 80px auto 20px; padding: 12px;
+  background: rgba(0,0,0,0.85);
+  border: 4px double #007466;
+  box-shadow: 0 0 12px #007466;
+  position: relative; box-sizing: border-box;
+}
+
+/* Logo */
+.logo {
+  display: block; margin: 0 auto 10px;
+  max-width: 60%; height: auto;
+}
+
+/* Messages */
+#messages {
+  height: 280px; overflow-y: auto;
+  background: #000; padding: 6px;
+  white-space: pre-wrap; word-break: break-word;
+  border: 2px inset #007466; font-size: 14px; line-height: 1.2;
+}
+
+/* Typing indicator */
+#typing-indicator {
+  font-style: italic; color: #888; padding: 4px;
+}
+
+/* Controls */
+#controls {
+  display: flex; gap: 4px; margin-top: 8px;
+}
+#controls input, #controls button {
+  flex: 1; font-family: 'VT323', monospace;
+  background: #002200; color: #007466;
+  border: 2px outset #007466; padding: 6px;
+}
+#controls button { flex: 0 0 auto; cursor: pointer; }
+
+.chat-window {
+  position: relative;
+  z-index: 2; /* ensures it's above the background */
+  background: rgba(0, 0, 0, 0.85);
+  padding: 12px;
+  border: 4px double #008d7b;
+  box-shadow: 0 0 12px #008078;
+  width: 360px;
+  max-width: 95vw;
+  margin: 40px auto;
+  box-sizing: border-box;
+}
+
+/* Background image behind chatbox */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: url("assets/chatbox-bg.jpg") center/cover no-repeat;
+  opacity: 0.8;
+  z-index: 1;
+  pointer-events: none;
+}
+
+#typing-indicator {
+  font-style: italic;
+  color: #459195;
+  padding: 2px 4px;
+  font-size: 13px;
+}
+
+#forum-btn {
+  position: fixed;
+  top: 16px;
+  left: 16px;                /* move to left */
+  background: #00a19a;       /* retro teal */
+  color: #fff;
+  padding: 6px 10px;
+  font-size: 14px;
+  border: 2px inset #004d46; /* inset border for old-school look */
+  cursor: pointer;
+  z-index: 20;
+  font-family: 'Arial', sans-serif;
+  text-shadow: 1px 1px #004d46;
+}
+#forum-btn:hover {
+  background: #00897a;
+}
+
+#forum-header {
+  text-align: center;
+  margin: 16px 0;
+}
+
+#forum-logo {
+  max-width: 180px;
+  height: auto;
+  filter: drop-shadow(2px 2px 0px #000);
+}
+
+#back-to-chat {
+  display: inline-block;
+  margin: 8px auto 16px;
+  padding: 6px 14px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #fff;
+  background-color: #007466;
+  border: 2px solid #000;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: 2px 2px 0 #000;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+#back-to-chat:hover {
+  background-color: #009e88;
+}

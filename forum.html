@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>KleioChat Forum</title>
+  <link rel="stylesheet" href="forum.css">
+  
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+</head>
+<body>
+
+  <header id="forum-header">
+    <a href="/" id="logo-link">
+      <img src="assets/logo2.png" alt="KleioChat Logo" id="forum-logo">
+    </a>
+  </header>
+  
+  <header>
+    <h1>KleioChat Forum</h1>
+    <nav id="board-nav">
+      <a 
+        href="#board=general">General</a>
+      <a href="#board=music">Music</a>
+      <a href="#board=chat">Chat</a>
+      <a href="#board=tech">Tech</a>
+      <a href="#board=art">Art</a>
+      <a href="#board=media">Media</a>
+      <a href="#board=foreign">Foreign</a>
+      <a href="#board=literature">Literature</a>
+      <a href="#board=fandom">Fandom</a>
+      <a href="#board=politics">Politics</a>
+      <a href="#board=news">News</a>
+    </nav>
+  </header>
+
+  <!-- Notifications -->
+  <div id="notif-container">
+    <button id="notif-btn">🔔 <span id="notif-count">0</span></button>
+    <div id="notif-list" hidden>
+      <h4>Notifications</h4>
+      <ul id="notif-items"></ul>
+    </div>
+  </div>
+  
+  <main id="content">
+    <!-- Dynamic content goes here -->
+  </main>
+
+  <script src="forum.js"></script>
+</body>
+</html>
+
